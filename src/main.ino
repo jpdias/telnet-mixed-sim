@@ -19,7 +19,7 @@ void setup()
 {
     Serial.begin(115200);
     ESP8266WiFiMulti WiFiMulti;
-    WiFiMulti.addAP("Umbrella", "softeng-2018");
+    WiFiMulti.addAP("wifi", "wifipass");
     while (WiFiMulti.run() != WL_CONNECTED)
     {
         delay(100);
