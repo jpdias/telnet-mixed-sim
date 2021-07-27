@@ -39,6 +39,11 @@ void loop()
 {
     if (client.available() && client.connected())
     {
+        if (Serial.available() > 0)
+        {
+            auto incomingByte = Serial.read();
+            client.write(incomingByte);
+        }
         auto c = char(client.read());
         if (checkParity(c))
         {
